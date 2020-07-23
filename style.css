@@ -1,3 +1,108 @@
+body {  
+  background-color: #2b2d42;
+  color: white;
+}
+
+.musical-background {
+  display: block;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border: 0px solid #000;
+}
+
+.notes
+ {
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
+
+.note-1 {
+  top: 15%;
+  left: 7%;
+  animation-delay: 0.5s;
+  color: #FF2281;
+}
+
+.note-2 {
+  top: 20%;
+  left: 40%;
+  animation-delay: 1.25s;
+}
+
+.note-3 {
+  top: 15%;
+  left: 90%;
+  animation-delay: 1.5s;
+  color: #F5D300;
+}
+
+.note-4 {
+  top: 15%;
+  left: 75%;
+  animation-delay: 1.75s;
+}
+
+.note-5 {
+  top: 70%;
+  left: 65%;
+  animation-delay: 0.5s;
+  color: #02B8A2;
+}
+
+.note-6 {
+  top: 80%;
+  left: 90%;
+  animation-delay: 1.25s;
+}
+
+.note-7 {
+  top: 70%;
+  left: 50%;
+  animation-delay: 1.5s;
+}
+
+.note-8 {
+  top: 85%;
+  left: 30%;
+  animation-delay: 1.75s;
+}
+
+.note-9 {
+  top: 90%;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.note-10 {
+  top: 45%;
+  left: 5%;
+  animation-delay: 1.25s;
+  color: #FFDEF3;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 @keyframes showTopText {
   	0% { transform: translate3d(0, 100%, 0); }
@@ -12,12 +117,12 @@
 .animated-title {
   	color: #222;
   	font-family: Roboto, Arial, sans-serif;
-  	height: 90vmin;
-  	left: 50%;
-  	position: absolute;
   	top: 50%;
-  	transform: translate(-50%, -50%);
-  	width: 120vmin;
+  	left: 50%;
+  	height: 90vmin;
+  	width: 90vmin;
+  	position: absolute;
+  	transform: translate(-50%, -50%);	
 }
 
 .animated-title > div {
@@ -38,15 +143,16 @@
 
 .animated-title > div div span.greeting {
   	font-size: 12vmin;
-  	color: #767676;
+  	color: white;
 }
 
 .animated-title > div div span.invitation {
   	font-size: 9vmin;
+  	color: #ff006e;
 }
 
 .animated-title > div.text-top {
-  	border-bottom: 0.5vmin solid #000;
+  	border-bottom: 0.5vmin solid #8d99ae;
   	top: 0;
 }
 
@@ -63,6 +169,7 @@
 }
 
 .animated-title > div.text-bottom div {
+	color: #d4d700;
   	font-size: 6vmin;
   	font-family: Roboto, Arial, sans-serif;
   	animation: showBottomText 0.5s;
