@@ -1,0 +1,81 @@
+body {  
+    background-color: #2b2d42;
+    color: white;
+  }
+  
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+    0% { transform: translate3d(0, 100%, 0); }
+    40%, 60% { transform: translate3d(0, 50%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+    0% { transform: translate3d(0, -100%, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+  
+.animated-title {
+    color: #222;
+    font-family: Roboto, Arial, sans-serif;
+    top: 50%;
+    left: 50%;
+    height: 90vmin;
+    width: 90vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);	
+}
+  
+.animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+  
+.animated-title > div div {
+    padding: 2vmin 0;
+    position: absolute;
+}
+  
+.animated-title > div div span {
+    display: block;
+}
+  
+.animated-title > div div span.instruction-header {
+    font-size: 8vmin;
+    color: white;
+}
+
+.animated-title > div div span.instruction-contents {
+    font-size: 4vmin;
+    color: #ff006e;
+    white-space: pre-line
+}
+  
+.animated-title > div.text-top {
+    border-bottom: 0.5vmin solid #8d99ae;
+    top: 0;
+}
+  
+.animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.30s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
+}
+  
+.animated-title > div.text-bottom {
+    bottom: 0;
+}
+  
+.animated-title > div.text-bottom div {
+    color: #d4d700;
+    font-size: 5vmin;
+    font-family: Roboto, Arial, sans-serif;
+    animation: showBottomText 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
+}
